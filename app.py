@@ -1,13 +1,10 @@
 import gradio as gr
-from image_cap import generate_caption
-
-def greet(image, text):
-    return 
+from image_cap import get_hashtags
 
 demo = gr.Interface(
-    fn=greet,
-    inputs=[gr.inputs.Image(type="pil"), "text"],
+    fn=get_hashtags,
+    inputs=["image"],
     outputs=["text"],
 )
 
-demo.launch(server_name="0.0.0.0", server_port= 7860)
+demo.launch(server_name="0.0.0.0", server_port=7860)
