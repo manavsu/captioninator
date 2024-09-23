@@ -7,9 +7,9 @@ services:
     volumes:
       - .:/app
     environment:
-      - TRANSFORMERS_CACHE=/app/cache
+      - HF_HOME=/app/cache
     ports:
-      - "7860:7860" 
+      - "7860:7860"
     deploy:
       resources:
         reservations:
